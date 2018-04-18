@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+<body>
+  <!--Page 1 Landing-->
+  <div class="landing">
+    <nav class="navbar" id="mainNav">
+        <a href="mailto:joshfield99@gmail.com" target="_blank" class="navbar-brand">
+          <img class="logo" src="images/email.png" alt="email logo">
+        </a>
+        <a href="https://github.com/joshField" target="_blank" class="navbar-brand">
+          <img class="logo" src="images/social-github.png" alt="github logo">
+        </a>
+        <a href="https://www.linkedin.com/in/joshua-a-field/" target="_blank" class="navbar-brand">
+          <img class="logo" src="images/social-linkedin.png" alt="linkedin logo">
+        </a>
+    </nav>
+
+    <div class="landing-wrapper">
+      <div class="landingL col-sm-6">
+        <h1>Josh Field.</h1>
+        <p>I am an <span class="blue">Electrical and Computer Engineering major</span>
+          at Northeastern University in Boston, MA. Welcome
+          to my website. Below you will find my most recent
+          projects. </p>
+        <a href="Resume - Josh Field.pdf" target="_blank">
+          <button type="button" class="btn btn-primary blue">Resume</button>
+        </a>
+      </div>
+      <div class="landingR col-sm-6">
+        <img src="images/myface.png" alt="profile picture">
+      </div>
+  </div>
+
+  <div class="Skills">
+    <h2>Skills</h2>
+    <div class="skillIcons">
+      <img class="icon" src="images/java.svg" alt="java logo">
+      <img class="icon" src="images/c-plus-plus-logo.png" alt="c++ logo">
+      <img class="icon" src="images/c-programming.png" alt="c logo">
+      <img class="icon" src="images/python-logo.png" alt="python logo">
+      <img class="icon" src="images/html5.svg" alt="html5 logo">
+      <img class="icon" src="images/css-3.svg" alt="css3 logo">
+      <img class="icon" src="images/latex_logo.png" alt="latex logo">
+      <img class="icon" src="images/Matlab_Logo.png" alt="matlab logo">
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <a class="js-scroll-trigger" href="#project">
+      <img class="scroll" src="images/scroll.png" alt="scroll arrow">
+    </a>
+  </div>
+</div>
+
+<!--Project 1-->
+<div class="project" id="project">
+  <h2>Projects</h2>
+  <div class="row projectstuff">
+    <div class="col-sm-3 projectTextL">
+      <h1>Robotic Arm</h1>
+      <a href="robotic-arm.html"><h5>View Project</h5></a>
+      <div class="underlineL"></div>
+    </div>
+    <div class="col-sm-9">
+      <img src="images/robotic-arm.jpg" alt="robotic arm" class="projectImg">
+    </div>
+  </div>
+
+  <!--Project 2-->
+  <div class="row projectstuff">
+    <div class="col-sm-9">
+      <img src="images/piezo-pic.jpg" alt="piezo pic" class="projectImg">
+    </div>
+    <div class="col-sm-3 projectTextR">
+      <h1>Piezoelectric<br>Keyboard</h1>
+      <a href="piezo.html"><h5>View Project</h5></a>
+      <div class="underlineR"></div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <a class="js-scroll-trigger" href="#mainNav">
+      <img class="scroll last-scroll" src="images/scroll.png" alt="scroll arrow">
+    </a>
+  </div>
+</div>
+</body>
+</html>

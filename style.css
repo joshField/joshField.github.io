@@ -1,0 +1,190 @@
+/*--------------Global-------------*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  width: 80%;
+  margin-left: 10% !important;
+  background: white;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 45px;
+  font-weight 400;
+  color: #17191A;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight 400;
+  color: #17191A;
+}
+h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight 200;
+  color: #8F9EA5;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #8F9EA5;
+  margin-top: 10px;
+  font-size: 20px;
+}
+a:hover {
+  outline: none;
+  text-decoration: none !important;
+}
+.blue {
+  color: #027BFF;
+}
+/*-----------Navbar-------------*/
+.navbar {
+  justify-content: flex-end !important;
+  height: 7%;
+}
+.logo {
+  height: 75px;
+  padding-top: 20px;
+  float: right;
+}
+.logo:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+/*---------Landing-------------*/
+.landing {
+  height: 100vh;
+  position: relative;
+}
+.landing-wrapper {
+  display: flex;
+  margin-top: 4%;
+  height: 50%;
+}
+.landingL{
+  height: 100%;
+}
+.landingL p {
+  margin-left: 20%;
+  margin-top: 6%;
+}
+.landingL button {
+  margin-left: 20%;
+}
+.landingR {
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+.landingR img {
+  height: 100%;
+  max-height: 390px;
+}
+
+/*--------------Skills----------*/
+.Skills {
+  text-align: center;
+  height: 30%;
+}
+.skillIcons {
+  height: 30%;
+}
+.icon {
+  margin: 15px;
+  height: 100%;
+  width: auto;
+}
+
+/*----------Scroll-------------*/
+.scroll {
+  height: 45px;
+  width: 45px;
+}
+.last-scroll {
+  transform: rotate(180deg);
+}
+
+/*----------Projects Section-------------*/
+.project {
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+.projectstuff {
+  vertical-align: middle;
+  height: 75%;
+}
+.project h2{
+  text-align: center;
+}
+.projectTextL {
+  margin-top: 4%;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 12.5% 0;
+}
+.projectImg {
+  width: 100%;
+  height: auto;
+  margin: 12.5% 0;
+  box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+	-webkit-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+	-moz-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+  }
+.underlineL {
+  display: block;
+  background-color: #027BFF;
+  height: 3px;
+  width: 61px;
+  margin-top: 5px;
+}
+.underlineR {
+  display: block;
+  float: right;
+  background-color: #027BFF;
+  height: 3px;
+  width: 61px;
+}
+.projectTextR {
+  text-align: right;
+  margin-top: 4%;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 12.5% 0;
+}
+
+/*----------Project Page-------------*/
+.img-fluid {
+  box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+	-webkit-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+	-moz-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+}
+.smallPics {
+  justify-content: space-around;
+  padding: 45px 0;
+}
+.home {
+  float: left;
+}
+.nav {
+  justify-content: space-between;
+}
+/*----------Media-------------*/
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 18px;
+  }
+}

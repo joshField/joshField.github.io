@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <!--Navbar--->
+  <div class="container">
+    <div class="landing">
+      <nav class="nav">
+        <a class="home" href="index.html">
+          <img class="logo" src="images/home-icon.svg" alt="home icon">
+        </a>
+        <div>
+          <a href="mailto:joshfield99@gmail.com" target="_blank" class="navbar-brand">
+            <img class="logo" src="images/email.png" alt="email logo">
+          </a>
+          <a href="https://github.com/joshField" target="_blank" class="navbar-brand">
+            <img class="logo" src="images/social-github.png" alt="github logo">
+          </a>
+          <a href="https://www.linkedin.com/in/joshua-a-field/" target="_blank" class="navbar-brand">
+            <img class="logo" src="images/social-linkedin.png" alt="linkedin logo">
+          </a>
+        </div>
+      </nav>
+
+      <!--Title-->
+      <h1 class="my-4">Piezoelectric Keyboard</h1>
+
+        <!--Info-->
+      <div class="row">
+        <div class="col-md-8">
+          <img src="images/piezo-pic.jpg" alt="piezo pic" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <h2 class="my-3">Project Description</h2>
+          <p> The goal was to create a keyboard prototype, from an existing mechanical number pad, by designing a model in which keystrokes would toggle 12 Minisense-100 piezo sensors wired in parallel to a data gathering circuit. The circuit would monitor voltage output from the keystrokes, allowing the study to determine the power output as a function of keystroke frequency. </p>
+          <h3 class="my-3">Project Details</h3>
+          <ul>
+            <li><p>Used AutoCAD to design the case, and SolidWorkds to 3-D print the brackets</p></li>
+            <li><p>Created a full bridge rectifier to convert the AC current to DC</p></li>
+            <li><p>Used an Arduino to create a voltmeter and display the data on an LED screen</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Other Info-->
+      <div class="row smallPics">
+        <div class="col-md-3">
+          <img class="img-fluid" src="images/piezofinal.jpg" alt="vertrical piezo">
+        </div>
+        <div class="col-md-3">
+          <img class="img-fluid" src="images/piezo-solidworks.png" alt="solidworks pic">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
