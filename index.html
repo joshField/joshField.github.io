@@ -2,14 +2,16 @@
 <html>
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117848112-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117848112-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-117848112-1');
-</script>
+    gtag('config', 'UA-117848112-1');
+  </script>
+  <script src="wow.js"></script>
+  <script>new WOW().init(); </script>
   <title>Josh Field</title>
   <link rel="icon" href="images/jf logo.jpg">
   <meta charset="utf-8">
@@ -17,6 +19,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="animate.css">
   </head>
 <body>
   <!--Page 1 Landing-->
@@ -71,7 +74,7 @@
   <!--Project 1-->
   <div class="project" id="project">
     <h2 class="my-3">Projects</h2>
-    <div class="row projectstuff">
+    <div class="row projectstuff wow fadeInUp">
       <div class="col-sm-3 projectTextL">
         <h1>Robotic Arm</h1>
         <a href="robotic-arm.html"><h5>View Project</h5></a>
@@ -83,7 +86,7 @@
     </div>
 
     <!--Project 2-->
-    <div class="row">
+    <div class="row wow fadeInUp">
       <div class="col-sm-3 projectTextR">
         <h1>Piezoelectric<br>Keyboard</h1>
         <a href="piezo.html"><h5>View Project</h5></a>
