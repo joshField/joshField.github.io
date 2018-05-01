@@ -9,11 +9,11 @@
   background: transparent;
 }
 
-body {
+/* body {
   width: 80%;
   margin-left: 10% !important;
   background: white;
-}
+} */
 h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 45px;
@@ -51,8 +51,7 @@ a:hover {
   height: 7%;
 }
 .logo {
-  height: 75px;
-  padding-top: 20px;
+  max-height: 60px;
   float: right;
 }
 .logo:hover {
@@ -62,47 +61,29 @@ a:hover {
 
 /*---------Landing-------------*/
 .landing {
-  height: 100vh;
-  position: relative;
+  margin-top: 5rem;
 }
-.landing-wrapper {
-  display: flex;
-  margin-top: 4%;
-  height: 50%;
+.bio h{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-.landingL{
-  height: 100%;
-}
-.landingL p {
+.bio p {
   margin-left: 20%;
   margin-top: 6%;
 }
-.landingL button {
+.bio button {
   margin-left: 20%;
 }
-.landingR {
-  float: right;
-  width: 50%;
-  height: 100%;
-  text-align: center;
-}
-.landingR img {
-  height: 100%;
-  max-height: 390px;
-}
-
 /*--------------Skills----------*/
 .Skills {
   text-align: center;
   height: 30%;
+  margin-top: 5rem;
 }
-.skillIcons {
-  height: 30%;
-}
+
 .icon {
   margin: 15px;
-  height: 100%;
-  width: auto;
+  max-height: 90px;
 }
 
 /*----------Scroll-------------*/
@@ -116,31 +97,24 @@ a:hover {
 
 /*----------Projects Section-------------*/
 .project {
-  width: 100%;
-  position: relative;
-  align-items: center;
-}
-.projectstuff {
-  vertical-align: middle;
-  height: 75%;
+  margin-top: 5rem;
 }
 .project h2{
   text-align: center;
 }
 .projectTextL {
-  margin-top: 4%;
-  margin-left: 0;
-  margin-right: 0;
   margin: 12.5% 0;
 }
 .projectImg {
   width: 100%;
   height: auto;
   margin: 12.5% 0;
-  box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
-	-webkit-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
-	-moz-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
   }
+.dropShadow {
+  box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+  -webkit-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+  -moz-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+}
 .underlineL {
   display: block;
   background-color: #027BFF;
@@ -157,18 +131,13 @@ a:hover {
 }
 .projectTextR {
   text-align: right;
-  margin-top: 4%;
-  margin-left: 0;
-  margin-right: 0;
   margin: 12.5% 0;
+  right: -75%;
 }
-
+.leftPic {
+  left: -25%;
+}
 /*----------Project Page-------------*/
-.img-fluid {
-  box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
-	-webkit-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
-	-moz-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
-}
 .smallPics {
   justify-content: space-around;
   padding: 45px 0;
@@ -181,10 +150,60 @@ a:hover {
 }
 /*----------Media-------------*/
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px !important;
+  }
   h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   p {
     font-size: 18px;
   }
+  .projectTextR, .underlineR {
+    float: left;
+    text-align: left;
+  }
+  .face {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+  }
+  .landing, .Skills {
+    margin-top: 1.5rem;
+  }
+  .bio h1 {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+  }
+  .icon {
+    height: 60px;
+  }
+  .scroll, .last-scroll{
+    height: 35px;
+    width: auto;
+  }
+  .logo{
+    height: 45px;
+    width: auto;
+  }
+  .leftPic {
+    left: 0;
+  }
+  .projectTextR {
+    margin: 12.5% 0 0 0;
+    right: 0;
+  }
+  .projectTextL {
+    margin: 12.5% 0 0 0
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .face {
+    display: block;
+  }
+  .face img {
+    width: 240px;
+  }
+
 }
