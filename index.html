@@ -20,7 +20,7 @@
   </head>
 <body>
   <!--Page 1 Landing-->
-  <div class="landing">
+  <div class="container">
     <nav class="navbar" id="mainNav">
         <a href="mailto:joshfield99@gmail.com" target="_blank" class="navbar-brand">
           <img class="logo" src="images/email.png" alt="email logo">
@@ -33,8 +33,8 @@
         </a>
     </nav>
 
-    <div class="landing-wrapper">
-      <div class="landingL col-sm-6">
+    <div class="landing row justify-content-space-between">
+      <div class="bio col-sm-6">
         <h1>Josh Field.</h1>
         <p>I am an <span class="blue">Electrical and Computer Engineering major</span>
           at Northeastern University in Boston, MA. Welcome
@@ -44,14 +44,14 @@
           <button type="button" class="btn btn-primary blue">Resume</button>
         </a>
       </div>
-      <div class="landingR col-sm-6">
-        <img src="images/myface.png" alt="profile picture">
+      <div class="col-sm-6 text-center face">
+        <img class="img-fluid" src="images/myface.png" alt="profile picture">
       </div>
   </div>
 
   <div class="Skills">
-    <h2>Skills</h2>
-    <div class="skillIcons">
+    <h2 class="my-3">Skills</h2>
+    <div class="row justify-content-center">
       <img class="icon" src="images/java.svg" alt="java logo">
       <img class="icon" src="images/c-plus-plus-logo.png" alt="c++ logo">
       <img class="icon" src="images/c-programming.png" alt="c logo">
@@ -62,42 +62,42 @@
       <img class="icon" src="images/Matlab_Logo.png" alt="matlab logo">
     </div>
   </div>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center mt-5">
     <a class="js-scroll-trigger" href="#project">
       <img class="scroll" src="images/scroll.png" alt="scroll arrow">
     </a>
   </div>
-</div>
 
-<!--Project 1-->
-<div class="project" id="project">
-  <h2>Projects</h2>
-  <div class="row projectstuff">
-    <div class="col-sm-3 projectTextL">
-      <h1>Robotic Arm</h1>
-      <a href="robotic-arm.html"><h5>View Project</h5></a>
-      <div class="underlineL"></div>
+  <!--Project 1-->
+  <div class="project" id="project">
+    <h2 class="my-3">Projects</h2>
+    <div class="row projectstuff">
+      <div class="col-sm-3 projectTextL">
+        <h1>Robotic Arm</h1>
+        <a href="robotic-arm.html"><h5>View Project</h5></a>
+        <div class="underlineL"></div>
+      </div>
+      <div class="col-sm-9">
+        <img src="images/robotic-arm.jpg" alt="robotic arm" class="projectImg dropShadow">
+      </div>
     </div>
-    <div class="col-sm-9">
-      <img src="images/robotic-arm.jpg" alt="robotic arm" class="projectImg">
-    </div>
-  </div>
 
-  <!--Project 2-->
-  <div class="row projectstuff">
-    <div class="col-sm-9">
-      <img src="images/piezo-pic.jpg" alt="piezo pic" class="projectImg">
+    <!--Project 2-->
+    <div class="row">
+      <div class="col-sm-3 projectTextR">
+        <h1>Piezoelectric<br>Keyboard</h1>
+        <a href="piezo.html"><h5>View Project</h5></a>
+        <div class="underlineR"></div>
+      </div>
+      <div class="col-sm-9 leftPic">
+        <img src="images/piezo-pic.jpg" alt="piezo pic" class="projectImg dropShadow">
+      </div>
     </div>
-    <div class="col-sm-3 projectTextR">
-      <h1>Piezoelectric<br>Keyboard</h1>
-      <a href="piezo.html"><h5>View Project</h5></a>
-      <div class="underlineR"></div>
+    <div class="row justify-content-center">
+      <a class="js-scroll-trigger" href="#mainNav">
+        <img class="scroll last-scroll" src="images/scroll.png" alt="scroll arrow">
+      </a>
     </div>
-  </div>
-  <div class="row justify-content-center">
-    <a class="js-scroll-trigger" href="#mainNav">
-      <img class="scroll last-scroll" src="images/scroll.png" alt="scroll arrow">
-    </a>
   </div>
 </div>
 </body>
