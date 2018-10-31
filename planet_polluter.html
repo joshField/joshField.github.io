@@ -5,7 +5,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117848112-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-117848112-1');
@@ -14,8 +18,18 @@
     <link rel="icon" href="images/jf logo.jpg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!--Unity WebGL-->
@@ -51,34 +65,44 @@
 
     <!--Title-->
     <h1 class="my-4">Planet Polluter</h1>
+    <div class="underlineTitle"></div>
 
     <!--Info-->
-    <div class="row">
-        <div class="col-md-8" style="min-height: 350px">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8 text-center" style="min-height: 500px">
             <div class="webgl-content" style="width: 100%">
                 <div id="gameContainer"></div>
                 <div class="footer">
-                    <div class="webgl-logo"></div>
                     <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-md-4">
-            <h2 class="my-3">Project Description</h2>
-            <p> This project was created at the 2018 NASA SpaceApps Hackathon in Boston, where we took 1st place.
+    <div class="row">
+        <div class="col">
+            <h3 class="my-4">Project Description</h3>
+            <div class="underlineSubtitle"></div>
+            <p class="descript"> This project was created at the 2018 NASA SpaceApps Hackathon in Boston, where we took 1st place.
                 This was created by myself Christian Kuss, Brock Fenbert, Blake McHale, and Ryan Lung.
                 The game is modeled after Plague Inc. where the goal is to infect the entire world with a virus.
                 In our game, the goal is to pollute the entire world by placing factories, farms and energy plants.
                 <br><br>
                 Here are my team-member's websites:<br>
-                Christian Kuss: <a href="http://christiankuss.com" class="link" target="_blank">christiankuss.com</a><br>
-                Blake McHale: <a href="http://blakemchale.com" class="link" target="_blank">blakemchale.com</a><br>
-                Brock Fenbert: <a href="http://brockfenbert.com" class="link" target="_blank">brockfenbert.com</a>
+                <a href="http://christiankuss.com" class="link" target="_blank">
+                    <button type="button" class="btn btn-outline-primary my-1">Christian Kuss</button>
+                </a><br>
+                <a href="http://blakemchale.com" class="link" target="_blank">
+                    <button type="button" class="btn btn-outline-primary my-1">Blake McHale</button>
+                </a><br>
+                <a href="http://brockfenbert.com" class="link" target="_blank">
+                    <button type="button" class="btn btn-outline-primary my-1">Brock Fenbert</button>
+                </a>
             </p>
 
-            <h3 class="my-3">Project Details</h3>
-            <ul class="ml-1">
+            <h3 class="my-4">Project Details</h3>
+            <div class="underlineSubtitle"></div>
+            <ul class="ml-5">
                 <li><p>Used Unity and C#</p></li>
                 <li><p>Incorporated global NASA CO2 and temperature data as parameters for the simulation</p></li>
                 <li><p>Very basic prototype that could become more complex with time</p></li>
@@ -86,13 +110,11 @@
         </div>
     </div>
 
-    <!--Other Info-->
-    <h2 class="my-3">Other Pictures</h2>
     <div class="row smallPics">
-        <div class="col-md-3">
+        <div class="col">
             <img class="img-fluid dropShadow my-3" src="images/award.jpg" alt="award pic" style="height: inherit;">
         </div>
-        <div class="col-md-3">
+        <div class="col">
             <img class="img-fluid dropShadow my-3" src="images/coding.jpg" alt="coding pic">
         </div>
     </div>
