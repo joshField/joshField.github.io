@@ -1,0 +1,243 @@
+/*--------------Global-------------*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ body {
+  position: relative;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 45px;
+  font-weight 400;
+  color: #17191A;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight 400;
+  color: #17191A;
+}
+h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight 200;
+  color: #8F9EA5;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #8F9EA5;
+  margin-top: 10px;
+  font-size: 20px;
+}
+a:hover {
+  outline: none;
+  text-decoration: none !important;
+}
+.blue {
+  color: #027BFF;
+}
+/*-----------Navbar-------------*/
+.navbar {
+  justify-content: flex-end !important;
+  height: 7%;
+}
+.logo {
+  max-height: 60px;
+  float: right;
+}
+.logo:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+/*---------Landing-------------*/
+.landing {
+  margin-top: 5rem;
+}
+.bio h{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.bio p {
+  margin-left: 20%;
+  margin-top: 6%;
+}
+.bio button {
+  margin-left: 20%;
+}
+/*--------------Skills----------*/
+.Skills {
+  text-align: center;
+  height: 30%;
+  margin-top: 5rem;
+}
+
+.icon {
+  margin: 15px;
+  max-height: 90px;
+}
+
+/*----------Scroll-------------*/
+.scroll {
+  height: 45px;
+  width: 45px;
+}
+.last-scroll {
+  transform: rotate(180deg);
+}
+
+/*----------Projects Section-------------*/
+.project {
+  margin-top: 5rem;
+}
+.project h2{
+  text-align: center;
+}
+.projectTextL {
+  margin: 12.5% 0;
+}
+.projectImg {
+  width: 100%;
+  height: auto;
+  margin: 12.5% 0;
+  }
+.dropShadow {
+  box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+  -webkit-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+  -moz-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.6)  ;
+}
+.underlineL {
+  display: block;
+  background-color: #027BFF;
+  height: 3px;
+  width: 61px;
+  margin-top: 5px;
+}
+.underlineR {
+  display: block;
+  float: right;
+  background-color: #027BFF;
+  height: 3px;
+  width: 61px;
+}
+.projectTextR {
+  text-align: right;
+  margin: 12.5% 0;
+  right: -75%;
+}
+.leftPic {
+  left: -25%;
+}
+/*----------Project Page-------------*/
+.smallPics {
+  justify-content: space-around;
+  padding: 45px 0;
+}
+.home {
+  float: left;
+}
+.nav {
+  justify-content: space-between;
+}
+.underlineTitle {
+  display: block;
+  background-color: #027BFF;
+  height: 5px;
+  width: 135px;
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
+
+.underlineSubtitle {
+    display: block;
+    background-color: #027BFF;
+    height: 5px;
+    width: 135px;
+    margin-top: -20px;
+    margin-bottom: 25px;
+}
+
+.carousel-item img{
+    width: auto;
+    height: 500px;
+    max-height: 500px;
+}
+
+.projectPic{
+    max-height: 500px;
+}
+
+.descript{
+    margin-left: 30px;
+}
+/*----------Media-------------*/
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px !important;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .projectTextR, .underlineR {
+    float: left;
+    text-align: left;
+  }
+  .face {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+  }
+  .landing, .Skills {
+    margin-top: 1.5rem;
+  }
+  .bio h1 {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+  }
+  .icon {
+    height: 60px;
+  }
+  .scroll, .last-scroll{
+    height: 35px;
+    width: auto;
+  }
+  .logo{
+    height: 45px;
+    width: auto;
+  }
+  .leftPic {
+    left: 0;
+  }
+  .projectTextR {
+    margin: 12.5% 0 0 0;
+    right: 0;
+  }
+  .projectTextL {
+    margin: 12.5% 0 0 0
+  }
+  .carousel-item img{
+      height: 250px;
+      max-height: 250px;
+      width: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .face {
+    display: block;
+  }
+  .face img {
+    width: 240px;
+  }
+
+}
