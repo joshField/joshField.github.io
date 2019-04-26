@@ -40,7 +40,7 @@ body {
 }
 
 .hero-text{
-	margin-bottom: 0;
+	margin-bottom: 10px;
 }
 
 .job-text h2{
@@ -63,6 +63,10 @@ body {
 
 .button-label{
 	margin-left: 15px;
+}
+
+.project-link{
+    margin-left: 15px;
 }
 
 .skillbar {
