@@ -32,8 +32,8 @@
             <img src="images/jlogo.png" width="85px" height="85px"/>
         </span>
         <h1>Josh Field</h1>
-        <p class="hero-text">Northeastern University Computer Engineering 2022</p>
-        <ul class="actions">
+        <p class="hero-text">Northeastern University Computer Engineering (BS, MS) 2022</p>
+        <ul class="actions special">
             <li><a href="resume.pdf" target="_blank" class="button icon fa-file-pdf-o">Resume</a></li>
             <li><a href="https://github.com/joshField" target="_blank" class="button icon fa-github">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/joshafield/" target="_blank" class="button icon fa-linkedin">LinkedIn</a></li>
@@ -65,11 +65,11 @@
                         Computer Vision and Machine Learning. Welcome to my website. Below you will find my experience, skills and most recent
                         projects.</p>
                 </div>
-                <span class="image"><img src="images/myface.png" width="200px" alt="" /></span>
+                <span class="image"><img src="images/profile.jpg" width="200px" alt="" /></span>
             </div>
         </section>
 
-        <!-- First Section -->
+        <!-- Experience -->
         <section id="first" class="main">
             <header class="major special">
                 <h2>Experience</h2>
@@ -102,18 +102,39 @@
                 </div>
                 <div class="col-9 col-12-small job-text">
                     <h2>California Institute of Technology</h2>
-                    <h3>Research Engineering Intern</h3>
+                    <h3>Research & Software Engineering Intern</h3>
                     <p>
-                        I was apart of the Seva Sanitation Project at the Linde & Robinson Lab. During my time there I developed a smart maintenance sensor network that monitors the treatment
-                        of waste water using an Arduino & Raspberry Pi. I also coded an Android app using Android Studio, SQLite and Amazon Web Services as a backend. This past summer I created
-                        predictive maintenance regression and classification models to predict the remaining useful life, and most likely root cause of a given failure.
+                      I was apart of the Seva Sanitation Project at the Linde & Robinson Lab. The goal of  this project is to develop a sustainable onsite wastewater treatment system.
                     </p>
+                    <p>
+                      <b>2018: </b>
+                      Developed a smart maintenance sensor network that monitors the treatment of wastewater using an Arduino & Raspberry Pi and 26 unique sensors. I also coded an Android app using Android Studio, SQLite and Amazon Web Services as a backend in order to assist local operators in system repairs.
+                    </p>
+
+                    <p>
+                      <b>2019: </b>
+                      Created predictive maintenance regression and classification models to predict the remaining useful life, and most likely root cause of a given failure.
+                    </p>
+
+                    <p>
+                      <b>2020: </b>
+                      Completed a beta version of the app by changing the architecture and finalizing features such as notification and error management. Developed unsupervised predictive maintenance anomaly detection through the use of clustering and deep learning techniques.
+                    </p>
+
+                    <ul class="actions">
+                      <li>
+                        <a href="https://ieeeghtc.org/" target="_blank" class="button primary">IEEE GHTC Paper</a>
+                      </li>
+                      <li>
+                        <a href="https://symposium.foragerone.com/caltechsummer/project/3583" target="_blank" class="button primary">SURF Report</a>
+                      </li>
+                    </ul>
                 </div>
             </div>
 
         </section>
 
-        <!-- Second Section -->
+        <!-- SKills -->
         <section id="second" class="main special">
             <header class="major">
                 <h2>Skills</h2>
@@ -130,44 +151,116 @@
                 <div class="skill-bar-percent"></div>
             </div>
 
-            <div class="skillbar clearfix " data-percent="75%">
+            <div class="skillbar clearfix " data-percent="85%">
                 <div class="skillbar-title" style="background: #7182af;"><span>MATLAB</span></div>
                 <div class="skillbar-bar" style="background: #9bb2e1;"></div>
                 <div class="skill-bar-percent"></div>
             </div>
 
-            <div class="skillbar clearfix " data-percent="65%">
+            <div class="skillbar clearfix " data-percent="85%">
                 <div class="skillbar-title" style="background: #69a3c9;"><span>Java</span></div>
                 <div class="skillbar-bar" style="background: #8cc9f0;"></div>
                 <div class="skill-bar-percent"></div>
             </div>
         </section>
 
-        <!-- Get Started -->
-        <section id="cta" class="main special">
-            <header class="major">
+        <!-- Projects -->
+        <section id="cta" class="main">
+            <header class="major special">
                 <h2>Projects</h2>
             </header>
 
-            <h3>Alpha Pilot Challenge<a class="project-link icon fa-link" target="_blank" href="https://www.herox.com/alphapilot"></a></h3>
-            <p>
-                Lockheed Martin autonomous drone racing competition.
-            </p>
+            <div class="row job">
+                <div class="col-3 col-12-small align-center">
+                    <div class="icon">
+                        <div class="square">
+                            <img src="images/octocopter.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 col-12-small proj-text">
+                    <h2>NUAV Advanced Software Projects<a class="project-link icon fa-link" target="_blank" href="https://aerospacenu.com/index.php/nuav/"></a></h2>
+                    <div class="chip">Python</div>
+                    <div class="chip">C++</div>
+                    <div class="chip">ROS</div>
+                    <p>
+                          Ongoing development for an automous platform using Dronekit & ROS. Created a Behavior Tree library for mission planning and execution. This has been tested successfully in the field for localizing a rocket using an RF sensor array. Currently working on a mission for precision landing with ArUco markers. Future goals include swarm deployment and reintegration missions.
+                    </p>
+                </div>
+            </div>
 
-            <h3>Planet Polluter<a class="project-link icon fa-link" target="_blank" href="https://github.com/christianmkuss/SpaceAppsHackathon"></a></h3>
-            <p>
-                1st-Place NASA SpaceApps Hackathon Unity game.
-            </p>
+            <div class="row job">
+                <div class="col-3 col-12-small align-center">
+                    <div class="icon">
+                        <div class="square">
+                            <img src="images/predictions_final.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 col-12-small proj-text">
+                    <h2>AlphaPilot Challenge<a class="project-link icon fa-link" target="_blank" href="https://www.herox.com/alphapilot"></a></h2>
+                    <div class="chip">Python</div>
+                    <div class="chip">ROS</div>
+                    <p>
+                          Lockheed Martin autonomous drone racing competition. Developed an image classifier using the YOLOv3 architecture in order to locate gates. Implemented quadrotor path planning and control models in the FlightGoggles simulation envirnment.
+                    </p>
+                </div>
+            </div>
 
-            <h3>Robotic Arm</h3>
-            <p>
-                Bluetooth control of a robotic arm using a Wiimote.
-            </p>
+            <div class="row job">
+                <div class="col-3 col-12-small align-center">
+                    <div class="icon">
+                        <div class="square">
+                            <img src="images/planetpolluter.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 col-12-small proj-text">
+                    <h2>Planet Polluter<a class="project-link icon fa-link" target="_blank" href="https://github.com/christianmkuss/SpaceAppsHackathon"></a></h2>
+                    <div class="chip">C#</div>
+                    <div class="chip">Unity</div>
+                    <p>
+                      1st-Place NASA SpaceApps Hackathon Project. A game where the goal is to pollute the earth, developed in Unity.
+                    </p>
+                </div>
+            </div>
 
-            <h3>Piezoelectric Keyboard</h3>
-            <p>
-                Generate power by typing.
-            </p>
+            <div class="row job">
+                <div class="col-3 col-12-small align-center">
+                    <div class="icon">
+                        <div class="square">
+                            <img src="images/robotic-arm.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 col-12-small proj-text">
+                    <h2>Robotic Arm</a></h2>
+                    <div class="chip">C++</div>
+                    <div class="chip">Simulink</div>
+                    <p>
+                      Bluetooth control of a robotic arm using a Wiimote and an FPGA. Simulink was used to generate PWM signals in order to control the arm servos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row job">
+                <div class="col-3 col-12-small align-center">
+                    <div class="icon">
+                        <div class="square">
+                            <img src="images/piezo-pic.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 col-12-small proj-text">
+                    <h2>Piezoelectric Keyboard</a></h2>
+                    <div class="chip">Arduino</div>
+                    <div class="chip">Solidworks</div>
+                    <p>
+                      Generate power by typing. Designed and prototyped a keyboard that measures the power generated from piezoelectronic sensors placed under key switches.
+                    </p>
+                </div>
+            </div>
+
         </section>
     </div>
 

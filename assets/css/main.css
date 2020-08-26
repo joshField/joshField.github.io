@@ -33,6 +33,36 @@ body {
 	line-height: 1;
 }
 
+.job.actions{
+	justify-content: left;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 20px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+
+.square img {
+	width: auto;
+	height: 200px;
+	max-width: 200px;
+	overflow: hidden;
+	object-fit: contain;
+}
+
+.proj-text h2 {
+	margin-bottom: 0;
+}
+
+.proj-text p {
+	margin-top: 10px;
+}
+
 .particles{
     width: 100%;
     z-index: -100;
@@ -2595,7 +2625,7 @@ input, select, textarea {
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
-		justify-content: center;
+		justify-content: left;
 	}
 
 		ul.actions li {
