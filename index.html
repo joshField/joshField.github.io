@@ -23,6 +23,7 @@
 <div class="particles" id="particles-js"></div>
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/app.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -32,9 +33,9 @@
             <img src="images/jlogo.png" width="85px" height="85px"/>
         </span>
         <h1>Josh Field</h1>
-        <p class="hero-text">Northeastern University Computer Engineering (BS, MS) 2022</p>
+        <p class="hero-text">Robotics Software Engineer</p>
         <ul class="actions special">
-            <li><a href="resume.pdf" target="_blank" class="button icon fa-file-pdf-o">Resume</a></li>
+            <li><a href="resume.pdf" target="_blank" class="button icon fa-file-pdf">Resume</a></li>
             <li><a href="https://github.com/joshField" target="_blank" class="button icon fa-github">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/joshafield/" target="_blank" class="button icon fa-linkedin">LinkedIn</a></li>
             <li><a href="mailto:joshfield99@gmail.com" target="_blank" class="button icon fa-envelope">Email</a></li>
@@ -61,9 +62,12 @@
                     <header class="major">
                         <h2>About Me</h2>
                     </header>
-                    <p>I am a Computer Engineering Major at Northeastern University in Boston, MA. I am very interested in Robotics, UAVs,
-                        Computer Vision and Machine Learning. Welcome to my website. Below you will find my experience, skills and most recent
-                        projects.</p>
+                    <p>
+                        I am a Software Engineer in Boston, MA. I recently graduated in May 2022 with BS & MS degrees in Computer Engineering from Northeastern University.
+                        I am very interested in Robotics, UAVs, Computer Vision and Machine Learning. Welcome to my website. Below you will find my experience, skills and most recent
+                        projects.
+                    </p>
+                    <a href="resume.pdf" target="_blank" class="button primary">Resume</a>
                 </div>
                 <span class="image"><img src="images/profile.jpg" width="200px" alt="" /></span>
             </div>
@@ -84,6 +88,13 @@
                 </div>
                 <div class="col-9 col-12-small job-text">
                     <h2>Amazon Robotics</h2>
+                    <h3>Software Development Engineer I | Aug '22 - Jan '23</h3>
+                    <p>
+                        The main project I worked on was developing a metrics pipeline and its surrounding infrastructure which was deployed to 100s of production robotic workcells.
+                        I gained experience with developing resilient code at scale, and mainly worked with AWS (IoT, Lambda, Cloudwatch, Kinesis, CDK).
+                        Through contributing to team code reviews and supporting customers with on-call responsibilities I gained development experience.
+                        Visiting a production Fufillment Center allowed me to learn about the entire Amazon delivery network, and allowed me to see the robots I was working on in real life.
+                    </p>
                     <h3>Software Development Engineering Co-op | Jan '21 - Jun '21</h3>
                     <p>
                         Developed a package singulation detection solution, using Tensorflow to classify images of packages.
@@ -104,7 +115,7 @@
                     <h2>California Institute of Technology</h2>
                     <h3>Research & Software Engineering Intern | Summer '18, '19, & '20</h3>
                     <p>
-                      I was apart of the Seva Sanitation Project at the Linde & Robinson Lab. The goal of  this project is to develop a sustainable onsite wastewater treatment system.
+                      I was a part of the Seva Sanitation Project at the Linde & Robinson Lab. The goal of  this project is to develop a sustainable onsite wastewater treatment system.
                     </p>
                     <p>
                       <b>2018: </b>
@@ -152,33 +163,118 @@
 
         </section>
 
-        <!-- SKills -->
+        <!-- Skills -->
         <section id="second" class="main special">
             <header class="major">
                 <h2>Skills</h2>
             </header>
+            <div class="row job">
+                <h2>
+                    Languages
+                </h2>
+            </div>
             <div class="skillbar clearfix " data-percent="90%">
-                <div class="skillbar-title" style="background: #bc7f87;"><span>C++</span></div>
+                <div class="skillbar-title" style="background: #bc7f87;"><span>Java</span></div>
                 <div class="skillbar-bar" style="background: #efa8b0;"></div>
                 <div class="skill-bar-percent"></div>
             </div>
-
-            <div class="skillbar clearfix " data-percent="95%">
+            <div class="skillbar clearfix " data-percent="90%">
                 <div class="skillbar-title" style="background: #967197;"><span>Python</span></div>
                 <div class="skillbar-bar" style="background: #c79cc8;"></div>
                 <div class="skill-bar-percent"></div>
             </div>
-
-            <div class="skillbar clearfix " data-percent="85%">
-                <div class="skillbar-title" style="background: #7182af;"><span>MATLAB</span></div>
+            <div class="skillbar clearfix " data-percent="80%">
+                <div class="skillbar-title" style="background: #7182af;"><span>C++</span></div>
                 <div class="skillbar-bar" style="background: #9bb2e1;"></div>
                 <div class="skill-bar-percent"></div>
             </div>
-
-            <div class="skillbar clearfix " data-percent="85%">
-                <div class="skillbar-title" style="background: #69a3c9;"><span>Java</span></div>
+            <div class="skillbar clearfix " data-percent="75%">
+                <div class="skillbar-title" style="background: #69a3c9;"><span>MATLAB</span></div>
                 <div class="skillbar-bar" style="background: #8cc9f0;"></div>
                 <div class="skill-bar-percent"></div>
+            </div>
+            <div class="skillbar clearfix " data-percent="65%">
+                <div class="skillbar-title" style="background: #7b60ca;"><span>Typescript</span></div>
+                <div class="skillbar-bar" style="background: #9b7df5;"></div>
+                <div class="skill-bar-percent"></div>
+            </div>
+            <br></br>
+            <div class="row job">
+                <h2>
+                    Applications
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-12-">
+                    <div class="card">
+                        <div class="container">
+                            <div class="row">
+                                <img src="images/ros_logo_large.png" class="skill-img">
+                                <p class="skill-text"><b>ROS/ROS2</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-">
+                    <div class="card">
+                        <div class="container">
+                            <div class="row">
+                                <img src="images/Gazebo_logo_without_text.svg.png" class="skill-img">
+                                <p class="skill-text"><b>Gazebo</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-">
+                    <div class="card">
+                        <div class="container">
+                            <div class="row">
+                                <img src="images/Tensorflow_logo.svg.png" class="skill-img">
+                                <p class="skill-text"><b>Tensorflow</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-">
+                    <div class="card">
+                        <div class="container">
+                            <div class="row">
+                                <img src="images/OpenCV_logo_no_text_.png" class="skill-img">
+                                <p class="skill-text"><b>OpenCV</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-">
+                    <div class="card">
+                        <div class="container">
+                            <div class="row">
+                                <img src="images/android-studio-logo.svg" class="skill-img">
+                                <p class="skill-text"><b>Android Studio</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-">
+                    <div class="card">
+                        <div class="container">
+                            <div class="row">
+                                <img src="images/aws-logo.jpg" class="skill-img">
+                                <p class="skill-text"><b>AWS</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-">
+                    <div class="card">
+                        <div class="container">
+                            <div class="row">
+                                <img src="images/sqlite-logo.png" class="skill-img">
+                                <p class="skill-text"><b>SQLite</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -191,17 +287,42 @@
                 <div class="col-3 col-12-small align-center">
                     <div class="icon">
                         <div class="square">
+                            <img src="images/Iso_view_Swarm_drone_attempted_landing.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 col-12-small proj-text">
+                    <h2>Swarm Carrier Capstone<a class="project-link icon fa-youtube" target="_blank" href="https://www.youtube.com/watch?v=lHyu_yog6CA"></a></h2>
+                    <h3>Capstone Project | Jul '21 - Dec '21</h3>
+                    <div class="chip">Python</div>
+                    <div class="chip">C++</div>
+                    <div class="chip">ROS</div>
+                    <div class="chip">OpenCV</div>
+                    <p>
+                        Northeastern University Capstone project where we successfully built and flew a large octocopter for the deployment and retrieval of smaller UAVs.
+                        Software controls were implemented with a modified version of PX4, RTPS, and ROS2. Missions are performed with a behavior tree library developed by our club in C++.
+                        The main mission involved dropping UAVs from our large UAV and then having them catch themselves mid-air using a custom Drop Mode we implemented. The UAVs then performed a search mission and
+                        reintegrated back into the large UAV using Computer Vision and precision landing on ArUco markers. We received 1st place in the capstone competition (out of 27 teams) and won the Gorlov Award for Innovation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row job">
+                <div class="col-3 col-12-small align-center">
+                    <div class="icon">
+                        <div class="square">
                             <img src="images/octocopter.jpg"/>
                         </div>
                     </div>
                 </div>
                 <div class="col-9 col-12-small proj-text">
-                    <h2>NUAV Advanced Software Projects<a class="project-link icon fa-link" target="_blank" href="https://www.aerospacenu.com/"></a></h2>
+                    <h2>NUAV Advanced Software Projects<a class="project-link icon fa-link" target="_blank" href="https://www.aerospacenu.com/nuav"></a></h2>
+                    <h3>Club Project | Jun '19 - May '22</h3>
                     <div class="chip">Python</div>
                     <div class="chip">C++</div>
                     <div class="chip">ROS</div>
                     <p>
-                          Ongoing development for an automous platform using Dronekit & ROS. Created a Behavior Tree library for mission planning and execution. This has been tested successfully in the field for localizing a rocket using an RF sensor array. Currently working on a mission for precision landing with ArUco markers. Future goals include swarm deployment and reintegration missions.
+                          Developed an automous platform using Dronekit & ROS. Created a Behavior Tree library for mission planning and execution. This has been tested successfully in the field for localizing a rocket using an RF sensor array.
                     </p>
                 </div>
             </div>
@@ -215,11 +336,12 @@
                     </div>
                 </div>
                 <div class="col-9 col-12-small proj-text">
-                    <h2>DeepFlight<a class="project-link icon fa-link" target="_blank" href="https://github.com/blakermchale/deep_flight"></a></h2>
+                    <h2>DeepFlight<a class="project-link icon fa-github" target="_blank" href="https://github.com/blakermchale/deep_flight"></a></h2>
+                    <h3>Class Project | Sep '20 - Dec '20</h3>
                     <div class="chip">Python</div>
                     <div class="chip">Tensorflow</div>
                     <p>
-                       Developed a double DQN to train a UAV to fly through an obstacle course given depth images. Used reinforcement learning environment with OpenAI Gym and Tensorflow
+                       Developed a double DQN to train a UAV to fly through an obstacle course given depth images. Used reinforcement learning environment with OpenAI Gym and Tensorflow. The simulation environment was built in Unreal Engine.
                     </p>
                 </div>
             </div>
@@ -234,6 +356,7 @@
                 </div>
                 <div class="col-9 col-12-small proj-text">
                     <h2>AlphaPilot Challenge<a class="project-link icon fa-link" target="_blank" href="https://www.herox.com/alphapilot"></a></h2>
+                    <h3>Club Project | Jun '19 - Dec '19</h3>
                     <div class="chip">Python</div>
                     <div class="chip">ROS</div>
                     <p>
@@ -252,6 +375,7 @@
                 </div>
                 <div class="col-9 col-12-small proj-text">
                     <h2>Retro-Eye<a class="project-link icon fa-link" target="_blank" href="https://devpost.com/software/retro-eye"></a></h2>
+                    <h3>Hackathon Project | Oct '19</h3>
                     <div class="chip">Python</div>
                     <div class="chip">Flask</div>
                     <p>
@@ -269,7 +393,8 @@
                     </div>
                 </div>
                 <div class="col-9 col-12-small proj-text">
-                    <h2>Planet Polluter<a class="project-link icon fa-link" target="_blank" href="https://github.com/christianmkuss/SpaceAppsHackathon"></a></h2>
+                    <h2>Planet Polluter<a class="project-link icon fa-github" target="_blank" href="https://github.com/christianmkuss/SpaceAppsHackathon"></a></h2>
+                    <h3>Hackathon Project | Apr '19</h3>
                     <div class="chip">C#</div>
                     <div class="chip">Unity</div>
                     <p>
@@ -288,6 +413,7 @@
                 </div>
                 <div class="col-9 col-12-small proj-text">
                     <h2>Robotic Arm</a></h2>
+                    <h3>Class Project | May '18</h3>
                     <div class="chip">C++</div>
                     <div class="chip">Simulink</div>
                     <p>
@@ -306,6 +432,7 @@
                 </div>
                 <div class="col-9 col-12-small proj-text">
                     <h2>Piezoelectric Keyboard</a></h2>
+                    <h3>Class Project | Dec '17</h3>
                     <div class="chip">Arduino</div>
                     <div class="chip">Solidworks</div>
                     <p>
