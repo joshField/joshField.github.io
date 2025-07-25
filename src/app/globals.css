@@ -3,130 +3,157 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 210 11.1% 3.53%;
+  :root {
+    /* Catppuccin Frappe (Light Mode) */
+    --background: 240 21% 95%;
+    /* base */
+    --foreground: 234 16% 35%;
+    /* text */
 
-      --card: 0 0% 100%;
-      --card-foreground: 210 11.1% 3.53%;
+    --card: 220 23% 95%;
+    /* surface0 */
+    --card-foreground: 234 16% 35%;
+    /* text */
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 210 11.1% 3.53%;
+    --popover: 220 23% 95%;
+    /* surface0 */
+    --popover-foreground: 234 16% 35%;
+    /* text */
 
-      --primary: 0 0% 9%;
-      --primary-foreground: 0 0% 98%;
+    --primary: 266 85% 58%;
+    /* mauve */
+    --primary-foreground: 240 21% 95%;
+    /* base */
 
-      --secondary: 0 0% 96.1%;
-      --secondary-foreground: 0 0% 9%;
+    --secondary: 228 24% 87%;
+    /* surface1 */
+    --secondary-foreground: 234 16% 35%;
+    /* text */
 
-      --muted: 0 0% 96.1%;
-      --muted-foreground: 0 0% 45.1%;
+    --muted: 228 24% 87%;
+    /* surface1 */
+    --muted-foreground: 233 13% 54%;
+    /* subtext0 */
 
-      --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 220 91% 54%;
+    /* blue */
+    --accent-foreground: 240 21% 95%;
+    /* base */
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
+    --destructive: 347 87% 44%;
+    /* red */
+    --destructive-foreground: 240 21% 95%;
+    /* base */
 
-      --border: 0 0% 89.8%;
-      --input: 0 0% 89.8%;
-      --ring: 0 0% 3.9%;
+    --border: 220 17% 82%;
+    /* surface2 */
+    --input: 220 17% 82%;
+    /* surface2 */
+    --ring: 266 85% 58%;
+    /* mauve */
 
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 210 11.1% 3.53%;
-      --foreground: 0 0% 98%;
-
-      --card: 210 11.1% 3.53%;
-      --card-foreground: 0 0% 98%;
-
-      --popover: 210 11.1% 3.53%;
-      --popover-foreground: 0 0% 98%;
-
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
-
-      --secondary: 0 0% 14.9%;
-      --secondary-foreground: 0 0% 98%;
-
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
-
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
-
-      --border: 0 0% 14.9%;
-      --input: 0 0% 14.9%;
-      --ring: 0 0% 83.1%;
-    }
+    --radius: 0.5rem;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    /* Catppuccin Mocha (Dark Mode) */
+    --background: 240 21% 15%; /* base */
+    --foreground: 226 64% 88%; /* text */
+
+    --card: 240 21% 15%; /* base - same as background */
+    --card-foreground: 226 64% 88%; /* text */
+
+    --popover: 232 23% 18%; /* surface0 */
+    --popover-foreground: 226 64% 88%; /* text */
+
+    --primary: 267 84% 81%; /* mauve */
+    --primary-foreground: 240 21% 15%; /* base */
+
+    --secondary: 231 16% 34%; /* surface1 */
+    --secondary-foreground: 226 64% 88%; /* text */
+
+    --muted: 231 16% 34%; /* surface1 */
+    --muted-foreground: 228 39% 80%; /* subtext1 */
+
+    --accent: 217 92% 76%; /* blue */
+    --accent-foreground: 240 21% 15%; /* base */
+
+    --destructive: 343 81% 75%; /* red */
+    --destructive-foreground: 240 21% 15%; /* base */
+
+    --border: 233 12% 39%; /* surface2 */
+    --input: 233 12% 39%; /* surface2 */
+    --ring: 267 84% 81%; /* mauve */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
 
-  h3 code {
-    @apply !text-lg md:!text-xl;
-  }
-  
-  pre {
-    @apply !px-0 rounded-lg overflow-x-auto py-4
-  }
-   
-  pre [data-line] {
-    @apply px-4
+  html {
+    scroll-behavior: smooth;
   }
 
-  code {
-    @apply text-sm md:text-base !leading-loose;
+  body {
+    @apply bg-background text-foreground;
   }
-  
-  pre > code {
-    counter-reset: line;
-  }
-  
+}
+
+h3 code {
+  @apply !text-lg md:!text-xl;
+}
+
+pre {
+  @apply !px-0 rounded-lg overflow-x-auto py-4
+}
+
+pre [data-line] {
+  @apply px-4
+}
+
+code {
+  @apply text-sm md:text-base !leading-loose;
+}
+
+pre>code {
+  counter-reset: line;
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+
   code[data-theme*=" "],
   code[data-theme*=" "] span {
-    color: var(--shiki-light);
-    background-color: var(--shiki-light-bg);
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
   }
-   
-  @media (prefers-color-scheme: dark) {
-    code[data-theme*=" "],
-    code[data-theme*=" "] span {
-      color: var(--shiki-dark);
-      background-color: var(--shiki-dark-bg);
-    }
-  }
-  
-  code[data-line-numbers] {
-    counter-reset: line;
-  }
-  
-  code[data-line-numbers] > [data-line]::before {
-    counter-increment: line;
-    content: counter(line);
-    @apply inline-block w-4 mr-4 text-right text-gray-500;
-  }
- 
-  code {
-    counter-reset: line;
-  }
- 
-  code > [data-line]::before {
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers]>[data-line]::before {
   counter-increment: line;
   content: counter(line);
- 
+  @apply inline-block w-4 mr-4 text-right text-gray-500;
+}
+
+code {
+  counter-reset: line;
+}
+
+code>[data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+
   /* Other styling */
   display: inline-block;
   width: 1rem;
@@ -134,11 +161,11 @@
   text-align: right;
   color: gray;
 }
- 
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
+
+code[data-line-numbers-max-digits="2"]>[data-line]::before {
   width: 2rem;
 }
- 
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
+
+code[data-line-numbers-max-digits="3"]>[data-line]::before {
   width: 3rem;
 }

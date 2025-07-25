@@ -45,6 +45,8 @@ export default function Navbar() {
                 <TooltipTrigger asChild>
                   <Link
                     href={social.url}
+                    target={social.url.startsWith('mailto:') ? '_self' : '_blank'}
+                    rel={social.url.startsWith('mailto:') ? '' : 'noopener noreferrer'}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12"

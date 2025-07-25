@@ -1,15 +1,25 @@
-import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DATA } from "@/data/resume";
+import { Code2, Wrench, Brain, Cloud } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
+
+// Category icons mapping
+const categoryIcons = {
+  "Programming Languages": Code2,
+  "Robotics & Tools": Wrench,
+  "AI & Machine Learning": Brain,
+  "Cloud & Database": Cloud,
+};
 
 export default function Page() {
   return (
@@ -29,6 +39,23 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <div className="flex gap-2 pt-2">
+                  {Object.entries(DATA.contact.social)
+                    .filter(([_, social]) => social.navbar)
+                    .map(([name, social]) => (
+                      <Button key={name} variant="outline" size="icon" asChild>
+                        <Link
+                          href={social.url}
+                          target={social.url.startsWith('mailto:') ? '_self' : '_blank'}
+                          rel={social.url.startsWith('mailto:') ? '' : 'noopener noreferrer'}
+                        >
+                          <social.icon className="size-4" />
+                        </Link>
+                      </Button>
+                    ))}
+                </div>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
@@ -102,12 +129,39 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {Object.entries(DATA.skills).map(([category, skills], categoryIndex) => {
+              const IconComponent = categoryIcons[category as keyof typeof categoryIcons];
+              return (
+                <BlurFade key={category} delay={BLUR_FADE_DELAY * 10 + categoryIndex * 0.1}>
+                  <Card className="h-full border-border/50">
+                    <CardHeader className="pb-3">
+                      <CardTitle className="flex items-center gap-2 text-sm font-semibold">
+                        <IconComponent className="size-4 text-primary" />
+                        {category}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="flex flex-wrap gap-1.5">
+                        {skills.map((skill, skillIndex) => (
+                          <BlurFade
+                            key={skill}
+                            delay={BLUR_FADE_DELAY * 10 + categoryIndex * 0.1 + skillIndex * 0.02}
+                          >
+                            <Badge
+                              variant="secondary"
+                              className="text-xs"
+                            >
+                              {skill}
+                            </Badge>
+                          </BlurFade>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </BlurFade>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -137,62 +191,19 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
                 <ProjectCard
-                  href={project.href}
+                  href={(project as any).href}
                   key={project.title}
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video}
-                  links={project.links}
+                  video={(project as any).video}
+                  links={(project as any).links}
                 />
               </BlurFade>
             ))}
           </div>
-        </div>
-      </section>
-      <section id="hackathons">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
         </div>
       </section>
       <section id="contact">
@@ -208,13 +219,14 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href={DATA.contact.social.LinkedIn.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  with a direct question on LinkedIn
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I&apos;ll respond whenever I can.
               </p>
             </div>
           </BlurFade>
