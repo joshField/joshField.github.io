@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -9,6 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { useState } from "react";
 
 interface Props {
   title: string;
@@ -39,6 +42,14 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const CHAR_LIMIT = 300; // Adjust this value as needed
+
+  const shouldTruncate = description.length > CHAR_LIMIT;
+  const displayDescription = shouldTruncate && !isExpanded
+    ? description.slice(0, CHAR_LIMIT).trim()
+    : description;
+
   return (
     <Card
       className={
@@ -76,9 +87,50 @@ export function ProjectCard({
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
-            {description}
-          </Markdown>
+          <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+            <span className="inline">
+              <Markdown
+                className="inline prose-p:inline prose-strong:inline prose-em:inline"
+                components={{
+                  p: ({ children }) => <span>{children}</span>,
+                  strong: ({ children }) => <strong>{children}</strong>,
+                  em: ({ children }) => <em>{children}</em>
+                }}
+              >
+                {displayDescription}
+              </Markdown>
+              {shouldTruncate && !isExpanded && (
+                <>
+                  {"... "}
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsExpanded(true);
+                    }}
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-medium"
+                  >
+                    read more
+                  </button>
+                </>
+              )}
+              {shouldTruncate && isExpanded && (
+                <>
+                  {" "}
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsExpanded(false);
+                    }}
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-medium"
+                  >
+                    show less
+                  </button>
+                </>
+              )}
+            </span>
+          </div>
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex flex-col px-2">

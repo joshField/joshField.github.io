@@ -47,7 +47,7 @@ export const ResumeCard = ({
           <AvatarImage
             src={logoUrl}
             alt={altText}
-            className="object-contain"
+            className={`object-contain ${logoUrl.includes('caltech-circle.png') ? '' : 'p-1.5'}`}
           />
           <AvatarFallback>{altText[0]}</AvatarFallback>
         </Avatar>

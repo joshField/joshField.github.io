@@ -24,6 +24,7 @@ const categoryIcons = {
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <div id="top" className="absolute top-0" />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -217,14 +218,14 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Want to chat? Just send me a message{" "}
                 <Link
                   href={DATA.contact.social.LinkedIn.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on LinkedIn
+                  on LinkedIn
                 </Link>{" "}
                 and I&apos;ll respond whenever I can.
               </p>
