@@ -81,7 +81,19 @@ export const ResumeCard = ({
               {period}
             </div>
           </div>
-          {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+          {subtitle && (
+            <div className="font-sans text-xs whitespace-pre-line">
+              <Markdown
+                className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert"
+                components={{
+                  p: ({ children }) => <span>{children}</span>,
+                  strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+                }}
+              >
+                {subtitle}
+              </Markdown>
+            </div>
+          )}
         </CardHeader>
         {description && (
           <motion.div

@@ -6,6 +6,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { Code2, Wrench, Brain, Cloud } from "lucide-react";
 import Link from "next/link";
@@ -45,15 +50,22 @@ export default function Page() {
                   {Object.entries(DATA.contact.social)
                     .filter(([_, social]) => social.navbar)
                     .map(([name, social]) => (
-                      <Button key={name} variant="outline" size="icon" asChild>
-                        <Link
-                          href={social.url}
-                          target={social.url.startsWith('mailto:') ? '_self' : '_blank'}
-                          rel={social.url.startsWith('mailto:') ? '' : 'noopener noreferrer'}
-                        >
-                          <social.icon className="size-4" />
-                        </Link>
-                      </Button>
+                      <Tooltip key={name}>
+                        <TooltipTrigger asChild>
+                          <Button variant="outline" size="icon" asChild>
+                            <Link
+                              href={social.url}
+                              target={social.url.startsWith('mailto:') ? '_self' : '_blank'}
+                              rel={social.url.startsWith('mailto:') ? '' : 'noopener noreferrer'}
+                            >
+                              <social.icon className="size-4" />
+                            </Link>
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent side="bottom">
+                          <p>{name}</p>
+                        </TooltipContent>
+                      </Tooltip>
                     ))}
                 </div>
               </BlurFade>

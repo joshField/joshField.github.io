@@ -91,20 +91,43 @@ export const DATA = {
       location: "Boston, MA",
       title: "Software Development Engineer I",
       logoUrl: "/amazon.png",
-      start: "January 2021",
+      start: "August 2022",
       end: "January 2023",
-      description: "**Software Development Engineer I | Aug '22 - Jan '23** \n - The main project I worked on was developing a metrics pipeline and its surrounding infrastructure which was deployed to 100s of production robotic workcells. \n - I gained experience with developing resilient code at scale, and mainly worked with AWS (IoT, Lambda, Cloudwatch, Kinesis, CDK).  \n - Through contributing to team code reviews and supporting customers with on-call responsibilities I gained development experience. \n - Visiting a production Fufillment Center allowed me to learn about the entire Amazon delivery network, and allowed me to see the robots I was working on in real life.  \n\n**Software Development Engineering Co-op | Jan '21 - Jun '21**  \n - Developed a package singulation detection solution, using Tensorflow to classify images of packages. \n - Fully integrated the project with AWS (Sagemaker, GreengrassV2, Lambda, Cloudwatch)."
+      description: "- Developed a metrics pipeline and its surrounding infrastructure (AWS IoT, Lambda, Cloudwatch, Kinesis, CDK) which was deployed to 100s of production robotic workcells. \
+      \n- Through contributing to team code reviews and supporting customers with on-call responsibilities I gained development experience. \
+      \n- Visiting a production Fulfillment Center allowed me to learn about the entire Amazon delivery network, and allowed me to see the robots I was working on in real life."
+    },
+    {
+      company: "Amazon Robotics",
+      badges: [],
+      href: "https://amazon.com",
+      location: "Boston, MA",
+      title: "Software Development Engineering Co-op",
+      logoUrl: "/amazon.png",
+      start: "January 2021",
+      end: "June 2021",
+      description: "- Developed a package singulation detection solution, using Tensorflow to classify images of packages.\
+      \n- Fully integrated the project with AWS (Sagemaker, GreengrassV2, Lambda, Cloudwatch)."
     },
     {
       company: "Caltech",
       href: "https://caltech.edu",
       badges: [],
       location: "Pasadena, CA",
-      title: "Software Engineer Intern",
+      title: "Software Engineer Intern · SURF Fellow",
       logoUrl: "/caltech-circle.png",
       start: "Summer 2018",
       end: "Summer 2020",
-      description: "I was a part of the Seva Sanitation Project at the [Linde & Robinson Lab](https://lindecenter.caltech.edu/). The goal of this project is to develop a sustainable onsite wastewater treatment system.  \n\n**2018:** Developed a smart maintenance sensor network that monitors the treatment of wastewater using an Arduino & Raspberry Pi and 26 unique sensors. I also coded an Android app using Android Studio, SQLite and Amazon Web Services as a backend in order to assist local operators in system repairs.  \n\n**2019:** Created predictive maintenance regression and classification models to predict the remaining useful life, and most likely root cause of a given failure.  \n\n**2020 SURF Program:** Completed a beta version of the app by changing the architecture and finalizing features such as notification and error management. Developed unsupervised predictive maintenance anomaly detection through the use of clustering and deep learning techniques. [IEEE GHTC Paper](https://ieeexplore.ieee.org/abstract/document/9342906)"
+      description: "- Worked on the Seva Sanitation Project at the [Linde & Robinson Lab](https://lindecenter.caltech.edu/) towards developing a sustainable onsite wastewater treatment system. \
+      \n- **May 2018 - August 2018** \
+      \n  - Developed smart maintenance sensor network monitoring wastewater treatment using Arduino & Raspberry Pi with 26 unique sensors \
+      \n  - Coded Android app using Android Studio, SQLite and AWS (IoT, Lambda, DynamoDB, Cognito) backend to assist local operators in system repairs \
+      \n- **June 2019 - August 2019** \
+      \n  - Created predictive maintenance regression and classification models to predict remaining useful life and most likely root cause of failures \
+      \n- **[SURF Program](https://sfp.caltech.edu/undergraduate-research/programs/surf): June 2020 - August 2020** \
+      \n  - Completed beta version of app by changing architecture and finalizing notification and error management features \
+      \n  - Developed unsupervised predictive maintenance anomaly detection using clustering and deep learning techniques \
+      \n  - Published [IEEE GHTC Paper](https://ieeexplore.ieee.org/abstract/document/9342906)"
     },
     {
       company: "Scientific Systems",
@@ -122,7 +145,7 @@ export const DATA = {
     {
       school: "Northeastern University",
       href: "https://northeastern.edu",
-      degree: "BS & MS of Computer Engineering",
+      degree: "**Bachelor of Science:** Computer Engineering\n**Master of Science:** Computer Engineering · Computer Vision, Machine Learning, Algorithms",
       logoUrl: "/neu-letter.png",
       start: "2017",
       end: "2022",
@@ -134,7 +157,7 @@ export const DATA = {
       href: "https://dub.sh/yt_swarm_carrier",
       dates: "Jul 2021 - Dec 2021",
       active: true,
-      description: "Northeastern University Capstone project where we successfully built and flew a large octocopter for the deployment and retrieval of smaller UAVs. Software controls were implemented with a modified version of PX4, RTPS, and ROS2. Missions are performed with a behavior tree library developed by our club in C++. The main mission involved dropping UAVs from our large UAV and then having them catch themselves mid-air using a custom Drop Mode we implemented. The UAVs then performed a search mission and reintegrated back into the large UAV using Computer Vision and precision landing on ArUco markers. We received 1st place in the capstone competition (out of 27 teams) and won the Gorlov Award for Innovation.",
+      description: "Northeastern University Capstone project where we successfully built and flew a large octocopter for the deployment and retrieval of smaller UAVs. Software controls were implemented with a modified version of PX4, RTPS, and ROS2. Missions are performed with a behavior tree library developed by our club in C++. The main mission involved dropping UAVs from our large UAV and then having them catch themselves mid-air using a custom Drop Mode we implemented. The UAVs then performed a search mission and reintegrated back into the large UAV using Computer Vision and precision landing on ArUco markers. We received 1st place in the capstone competition (out of 27 teams) and won the [Gorlov Award for Innovation](https://give.northeastern.edu/financial-aid-and-scholarship/GF0945-64.html).",
       technologies: [
         "Python",
         "C++",
