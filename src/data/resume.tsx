@@ -178,7 +178,7 @@ export const DATA = {
       href: "https://www.aerospacenu.com/nuav",
       dates: "June 2019 - May 2022",
       active: true,
-      description: "Northeasern Unmaned Aerial Vehicles (NUAV) is a club my friends and I started my sophmore year. It focused on developing software for our custome built UAVs. We worked in the areas of computer vision, simulation, behavior trees, and path planning. As the Software Lead, I would also work with younger students to teach them about robotics and software development.",
+      description: "Northeastern Unmaned Aerial Vehicles (NUAV) is a club my friends and I started my sophmore year. It focused on developing software for our custome built UAVs. We worked in the areas of computer vision, simulation, behavior trees, and path planning. As the Software Lead, I would also work with younger students to teach them about robotics and software development.",
       technologies: [
         "Python",
         "C++",
