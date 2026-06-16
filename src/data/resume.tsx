@@ -78,7 +78,7 @@ export const DATA = {
       href: "https://humatics.com",
       badges: [],
       location: "Boston, MA",
-      title: "Software Engineer",
+      title: "Senior Software Engineer",
       logoUrl: "/humatics-logo.jpeg",
       start: "June 2023",
       end: "Present",

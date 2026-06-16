@@ -46,9 +46,19 @@ export default function Page() {
                 text={DATA.description}
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <div className="flex gap-2 pt-2">
+                <div className="flex items-center gap-2 pt-2">
+                  <Button variant="outline" size="sm" className="gap-2" asChild>
+                    <Link
+                      href={DATA.contact.social.resume.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <DATA.contact.social.resume.icon className="size-4" />
+                      Resume
+                    </Link>
+                  </Button>
                   {Object.entries(DATA.contact.social)
-                    .filter(([_, social]) => social.navbar)
+                    .filter(([name, social]) => social.navbar && name !== "resume")
                     .map(([name, social]) => (
                       <Tooltip key={name}>
                         <TooltipTrigger asChild>
